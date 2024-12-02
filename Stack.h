@@ -21,4 +21,5 @@ public:
 	void Push(int c);
 	void Print();
 	Node* Pop();
+	Node* Copy();
 };

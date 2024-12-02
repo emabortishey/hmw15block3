@@ -15,5 +15,14 @@ int main()
 
 	test_obj.Print();
 
+	cout << test_obj.GetCount();
+
+	Node* curr = test_obj.Copy();
+	while (curr != nullptr)
+	{
+		cout << curr->data << ' ';
+		curr = curr->next;
+	}
+
 	return 0;
 }

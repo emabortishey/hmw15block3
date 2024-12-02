@@ -15,7 +15,7 @@ bool Stack::IsEmpty()
 int Stack::GetCount()
 {
 	int size = 0;
-	Node* curr = head->next;
+	Node* curr = head;
 	while (curr != nullptr)
 	{
 		size++;
@@ -46,4 +46,24 @@ Node* Stack::Pop()
 	Node* returnin = head;
 	head = head->next;
 	return returnin;
+}
+
+
+Node* Stack::Copy()
+{
+	Stack copycat;
+	Node* curr = head;
+	int* mass_buff = new int[GetCount()];
+	int indx = GetCount()-1;
+	while (curr != nullptr)
+	{
+		mass_buff[indx--] = curr->data;
+		curr = curr->next;
+	}
+	curr = head;
+	for(int i = 0; i< GetCount();i++)
+	{
+		copycat.Push(mass_buff[i]);
+	}
+	return copycat.head;
 }
