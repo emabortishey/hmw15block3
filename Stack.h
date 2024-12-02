@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Node
@@ -23,4 +24,5 @@ public:
 	Node* Pop();
 	Node* Copy();
 	Node* operator+(Stack obj);
+	Node* operator*(Stack obj);
 };

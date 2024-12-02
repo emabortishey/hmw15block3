@@ -17,7 +17,7 @@ int main()
 
 	Stack test_obj2;
 
-	int mass2[4]{ 5,6,7,8 };
+	int mass2[4]{ 5,2,7,3 };
 
 	for (int elem : mass2)
 	{
@@ -26,7 +26,7 @@ int main()
 
 	cout << test_obj.GetCount();
 
-	Node* curr = test_obj + test_obj2;
+	Node* curr = test_obj * test_obj2;
 	while (curr != nullptr)
 	{
 		cout << curr->data << ' ';
