@@ -15,9 +15,18 @@ int main()
 
 	test_obj.Print();
 
+	Stack test_obj2;
+
+	int mass2[4]{ 5,6,7,8 };
+
+	for (int elem : mass2)
+	{
+		test_obj2.Push(elem);
+	}
+
 	cout << test_obj.GetCount();
 
-	Node* curr = test_obj.Copy();
+	Node* curr = test_obj + test_obj2;
 	while (curr != nullptr)
 	{
 		cout << curr->data << ' ';

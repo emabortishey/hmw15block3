@@ -22,4 +22,5 @@ public:
 	void Print();
 	Node* Pop();
 	Node* Copy();
+	Node* operator+(Stack obj);
 };

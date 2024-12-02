@@ -67,3 +67,17 @@ Node* Stack::Copy()
 	}
 	return copycat.head;
 }
+
+Node* Stack::operator+(Stack obj)
+{
+	Stack plus;
+	plus.head = Copy();
+	Node* curr = plus.head;
+	while (curr->next != nullptr)
+	{
+		curr = curr->next;
+	}
+	curr->next = obj.Copy();
+
+	return plus.head;
+}
